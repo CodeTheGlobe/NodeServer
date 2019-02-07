@@ -21,14 +21,7 @@ var dashboard = require('./routes/dashboard');
 
 var app = express();
 
-//socket.io
 var server = require('http').Server(app);
-var io = require('socket.io')(server);
-
-app.use(function(req,res,next) {
-    res.io = io;
-    next();
-})
 
 app.use(logger('dev'));
 
@@ -53,10 +46,7 @@ app.use(function(err, req, res, next) {
 
   // render the error page
   res.status(err.status || 500);
-  //res.render('error');
-    //render the error to you client application
-    //res.render('error-404');
-    //or
+ 
     res.json({
         message:err.message,
         error:err
