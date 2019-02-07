@@ -12,7 +12,6 @@ var heroes = new Schema({
 });
 
 
-//Shipment.plugin(passportLocalMongoose);
 module.exports = mongoose.model('heroe', heroes);
 
 
