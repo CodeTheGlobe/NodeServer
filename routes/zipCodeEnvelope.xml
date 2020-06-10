@@ -1,0 +1,11 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:fir="https://online.firstcentralcreditbureau.com/FirstCentralNigeriaWebService">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <fir:Login>
+         <!--Optional:-->
+         <fir:UserName>imafidonj</fir:UserName>
+         <!--Optional:-->
+         <fir:Password>imafidon</fir:Password>
+      </fir:Login>
+   </soapenv:Body>
+</soapenv:Envelope>

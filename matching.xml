@@ -1,0 +1,19 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:fir="https://online.firstcentralcreditbureau.com/FirstCentralNigeriaWebService">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <fir:ConnectCommercialMatch>
+         <!--Optional:-->
+         <fir:DataTicket>?</fir:DataTicket>
+         <!--Optional:-->
+         <fir:EnquiryReason>?</fir:EnquiryReason>
+         <!--Optional:-->
+         <fir:BusinessName>?</fir:BusinessName>
+         <!--Optional:-->
+         <fir:BusinessRegistrationNumber>?</fir:BusinessRegistrationNumber>
+         <!--Optional:-->
+         <fir:AccountNumber>?</fir:AccountNumber>
+         <!--Optional:-->
+         <fir:ProductID>?</fir:ProductID>
+      </fir:ConnectCommercialMatch>
+   </soapenv:Body>
+</soapenv:Envelope>
