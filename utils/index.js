@@ -1,16 +1,21 @@
- function getRequest(body) {
-    const {func, ...rest} = body;
-    const val = Object.keys(rest);
-    let start = '';
-    val.forEach(el => start +=` <fir:${el}>${body[el]}<fir:${el}>`)
-    return `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:fir="https://online.firstcentralcreditbureau.com/FirstCentralNigeriaWebService">
-    <soapenv:Header/>
-    <soapenv:Body>
-    <fir:${func}>
-       ${start}
-    </fir:${func}>
-    </soapenv:Body>
-    </soapenv:Envelope>`
+const baseUrl = "https://online.firstcentralcreditbureau.com/FirstCentralNigeriaWebService/FirstCentralNigeriaWebService.asmx";
+
+const getUri = (type) => {
+    switch(type) {
+        case 'login':
+            return 'https://online.firstcentralcreditbureau.com/FirstCentralNigeriaWebService/Login';
+
+        case 'base':
+            return "https://online.firstcentralcreditbureau.com/FirstCentralNigeriaWebService/FirstCentralNigeriaWebService.asmx";
+        
+        case 'consumer_match':
+            return 'https://online.firstcentralcreditbureau.com/FirstCentralNigeriaWebService/ConnectConsumerMatch';
+
+        case 'consumer_fc_report':
+            return 'https://online.firstcentralcreditbureau.com/FirstCentralNigeriaWebService/GetConsumerFullCreditReport';
+    }
+}
+module.exports = {
+    getUri
 }
 
-module.exports = {getRequest}
